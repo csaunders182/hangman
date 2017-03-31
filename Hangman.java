@@ -49,7 +49,7 @@ public class Hangman extends ConsoleProgram {
     	while (guessChar == ""){
     		println("Please enter guess letter");
     		guessChar = readLine();
-    		if (guessChar.charAt(0) > 'a' && guessChar.charAt(0) < 'z'){
+    		if (guessChar.charAt(0) > 'a' && guessChar.charAt(0) < 'z' && guessChar != ""){
     			guessChar.toUpperCase();
     		}
     		if (guessChar.length() != 1){
