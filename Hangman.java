@@ -45,12 +45,13 @@ public class Hangman extends ConsoleProgram {
     	}
     }
     
+    //for user guess entry. will run until user enters a string of length 1 and will convert lower to uppercase
     private void userGuessCharacter(){
     	while (guessChar == ""){
+    		//keep this print line for user instruction
     		println("Please enter guess letter");
     		guessChar = readLine();
     		if (guessChar.length() != 1){
-    			println("guessChar.length() = " + guessChar.length());
     			guessChar = "";
     		}
     	}
@@ -59,6 +60,7 @@ public class Hangman extends ConsoleProgram {
 		}
     }
     
+    //checks for a match with picked word. then resets guessChar so that user will be prompted to guess again on next loop iteration
     private void checkGuess(){
     	for (int i=0; i<word.length(); i++){
     		if (word.charAt(i) == guessChar.charAt(0)){
