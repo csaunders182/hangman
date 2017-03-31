@@ -32,6 +32,7 @@ public class Hangman extends ConsoleProgram {
 			println("userWord = " + userWord);
 			println("word = " + word);
 		}
+		println("word matched!!");
 	}
     
     private void getWordFromLexicon(){
@@ -50,6 +51,9 @@ public class Hangman extends ConsoleProgram {
     		guessChar = readLine();
     		if (guessChar.length() != 1){
     			guessChar = "";
+    		}
+    		if (guessChar.charAt(0) > 'a' && guessChar.charAt(0) < 'z'){
+    			guessChar.toUpperCase();
     		}
     	}
     }
