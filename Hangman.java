@@ -56,7 +56,7 @@ public class Hangman extends ConsoleProgram {
     
     private void checkGuess(){
     	for (int i=0; i<=word.length(); i++){
-    		if (word.substring(i, i+1).equals(guessChar)){
+    		if (word.charAt(i) == guessChar.charAt(0)){
     			userWord = userWord.substring(0, i) + guessChar + userWord.substring(i+1);
     		}
     	}
