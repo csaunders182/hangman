@@ -24,15 +24,17 @@ public class Hangman extends ConsoleProgram {
 	
 	//executes playing hangman 
     public void run() {
-		getWordFromLexicon();
-		createUserWord();
-		while (!userWord.equals(word)){
-			userGuessCharacter();
-			checkGuess();
-			println("userWord = " + userWord);
-			println("word = " + word);
-		}
-		println("word matched!!");
+    	while (true){
+    		getWordFromLexicon();
+    		createUserWord();
+    		while (!userWord.equals(word)){
+    			userGuessCharacter();
+    			checkGuess();
+    			println("userWord = " + userWord);
+    			println("word = " + word);
+    		}
+    		println("word matched!!");
+    	}
 	}
     
     private void getWordFromLexicon(){
