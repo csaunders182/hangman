@@ -56,8 +56,7 @@ public class Hangman extends ConsoleProgram {
     		}
     	}
     	if (guessChar.charAt(0) > 'a' && guessChar.charAt(0) < 'z'){
-			guessChar.toUpperCase();
-			println("guessChar = " + guessChar);
+			guessChar = guessChar.toUpperCase();
 		}
     }
     
