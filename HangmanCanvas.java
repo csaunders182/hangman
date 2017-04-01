@@ -31,6 +31,10 @@ public class HangmanCanvas extends GCanvas {
 	public void noteIncorrectGuess(char letter) {
 		/* You fill this in */
 	}
+	
+	public void init(){
+		add(head,getWidth()/2, getHeight()/(1/3));
+	}
 
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
@@ -44,5 +48,8 @@ public class HangmanCanvas extends GCanvas {
 	private static final int HIP_WIDTH = 36;
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
+	
+	private GOval head = new GOval(HEAD_RADIUS * 2, HEAD_RADIUS * 2);
+	
 
 }
