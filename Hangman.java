@@ -80,6 +80,7 @@ public class Hangman extends ConsoleProgram {
     	}
     	if (wrongCount == word.length()){
     		wrongGuess += 1;
+    		hangmanCanvas.noteIncorrectGuess(guessChar.charAt(0));
     	}
     	if (wrongGuess == MAXWRONGGUESSES){
 //    		revealHangMan();
