@@ -23,6 +23,7 @@ public class Hangman extends ConsoleProgram {
 	//sets up the hangman game
 	public void init(){
 		add(hangmanCanvas);
+		hangmanCanvas.drawHangman();
 	}
 	
 	//executes playing hangman 

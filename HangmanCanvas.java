@@ -32,7 +32,7 @@ public class HangmanCanvas extends GCanvas {
 		/* You fill this in */
 	}
 	
-	public void init(){
+	public void drawHangman(){
 		add(head,getWidth()/2, getHeight()/(1/3));
 	}
 
