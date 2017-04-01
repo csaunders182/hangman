@@ -32,8 +32,8 @@ public class HangmanCanvas extends GCanvas {
 		/* You fill this in */
 	}
 	
-	public void drawHangman(){
-		add(head,getWidth()/2, getHeight()/(1/3));
+	public void init(){
+		add(head,0,0);
 	}
 
 /* Constants for the simple version of the picture (in pixels) */
