@@ -32,9 +32,6 @@ public class HangmanCanvas extends GCanvas {
 		/* You fill this in */
 	}
 	
-	public void init(){
-		add(head,0,0);
-	}
 
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
