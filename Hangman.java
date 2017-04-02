@@ -18,10 +18,11 @@ public class Hangman extends ConsoleProgram {
 	private String userWord = "";
 	private String guessChar = "";
 	private int wrongGuess = 0;
-	private HangmanCanvas hangmanCanvas = new HangmanCanvas();
+	private HangmanCanvas hangmanCanvas;
 	
 	//sets up the hangman game
 	public void init(){
+		hangmanCanvas = new HangmanCanvas();
 		add(hangmanCanvas);
 	}
 	

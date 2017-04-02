@@ -46,7 +46,10 @@ public class HangmanCanvas extends GCanvas {
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
 	
-	private GOval head = new GOval(HEAD_RADIUS * 2, HEAD_RADIUS * 2);
+	private GOval head;
+	private GLine leftArm, rightArm, body, leftLeg, rightLeg;
+	
+	
 	
 
 }
