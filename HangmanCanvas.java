@@ -36,8 +36,8 @@ public class HangmanCanvas extends GCanvas {
 		switch (wrongGuess) {
 		case 1: head.setVisible(true);
 				break;
-		case 1: body.setVisible(true);
-		break;
+		case 2: body.setVisible(true);
+				break;
 		default:
 				break;
 		}
