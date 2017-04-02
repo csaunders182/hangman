@@ -81,6 +81,7 @@ public class Hangman extends ConsoleProgram {
     			if (word.charAt(i) != guessChar.charAt(0)){
     				wrongCount += 1;
     			}
+    			println("wrongCount = " + wrongCount);
     		} 
     	}
     	if (wrongCount == word.length()){
