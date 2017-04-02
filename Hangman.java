@@ -85,10 +85,9 @@ public class Hangman extends ConsoleProgram {
     	}
     	if (wrongCount == word.length()){
     		wrongGuess += 1;
-    		hangmanCanvas.noteIncorrectGuess(guessChar.charAt(0));
+    		hangmanCanvas.noteIncorrectGuess(guessChar.charAt(0), wrongGuess);
     	}
     	
-    	}
     	guessChar = "";
     }
     
