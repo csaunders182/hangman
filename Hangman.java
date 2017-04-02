@@ -24,6 +24,7 @@ public class Hangman extends ConsoleProgram {
 	public void init(){
 		hangmanCanvas = new HangmanCanvas();
 		add(hangmanCanvas);
+		hangmanCanvas.add(new GOval(100,100,0,0));
 	}
 	
 	//executes playing hangman 
