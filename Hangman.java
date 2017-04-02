@@ -78,11 +78,11 @@ public class Hangman extends ConsoleProgram {
         		println(word.charAt(i));
     			println("match found");
     			userWord = userWord.substring(0, i) + guessChar + userWord.substring(i+1);
-    			if (word.charAt(i) != guessChar.charAt(0)){
-    				wrongCount += 1;
-    			}
-    			println("wrongCount = " + wrongCount);
+    			
     		} 
+    		if (word.charAt(i) != guessChar.charAt(0)){
+				wrongCount += 1;
+			}
     	}
     	if (wrongCount == word.length()){
     		wrongGuess += 1;
