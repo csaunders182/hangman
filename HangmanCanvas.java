@@ -39,7 +39,7 @@ public class HangmanCanvas extends GCanvas {
 		case 2: body.setVisible(true);
 				break;
 		default:
-				break;
+				reset();
 		}
 		
 	}
