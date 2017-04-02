@@ -10,7 +10,8 @@ public class HangmanCanvas extends GCanvas {
 
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
-		/* You fill this in */
+		head.setVisible(false);
+		body.setVisible(false);
 	}
 
 /**
