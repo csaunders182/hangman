@@ -49,7 +49,10 @@ public class HangmanCanvas extends GCanvas {
 	private GOval head;
 	private GLine leftArm, rightArm, body, leftLeg, rightLeg;
 	
-	
+	public void init(){
+		head = new GOval(HEAD_RADIUS,HEAD_RADIUS, 0,0);
+		add(head);
+	}
 	
 
 }
