@@ -61,7 +61,7 @@ public class HangmanCanvas extends GCanvas {
 	private GLine body;
 	
 	private void createBodyParts(){
-		head = new GOval(getWidth()/2 - HEAD_RADIUS, getHeight()/2 + BODY_LENGTH/2 + HEAD_RADIUS  ,HEAD_RADIUS*2, HEAD_RADIUS *2);
+		head = new GOval(getWidth()/2 - HEAD_RADIUS, getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS  ,HEAD_RADIUS*2, HEAD_RADIUS *2);
 		add(head);
 		
 		body = new GLine(getWidth()/2, getHeight()/2 + BODY_LENGTH/2 , getWidth()/2, getHeight()/2 - BODY_LENGTH/2);
