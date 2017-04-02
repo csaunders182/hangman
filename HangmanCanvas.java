@@ -71,7 +71,7 @@ public class HangmanCanvas extends GCanvas {
 		body = new GLine(getWidth()/2, getHeight()/2 + BODY_LENGTH/2 , getWidth()/2, getHeight()/2 - BODY_LENGTH/2);
 		body.setVisible(false);
 		add(body);
-		leftArm = new GLine (getWidth()/2, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD, getWidth()/2 - UPPER_ARM_LENGTH, getHeight()/2 - BODY_LENGTH - ARM_OFFSET_FROM_HEAD);
+		leftArm = new GLine (getWidth()/2, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD, getWidth()/2 - UPPER_ARM_LENGTH, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD);
 		add(leftArm);
 		leftArm.setVisible(false);
 	}
