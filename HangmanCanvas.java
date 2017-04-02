@@ -42,6 +42,9 @@ public class HangmanCanvas extends GCanvas {
 		case 3: leftArm.setVisible(true);
 				leftHand.setVisible(true);
 				break;
+		case 4: rightArm.setVisible(true);
+				rightHand.setVisible(true);
+				break;
 		default:
 				break;
 		}
