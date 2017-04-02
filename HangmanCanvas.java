@@ -29,14 +29,14 @@ public class HangmanCanvas extends GCanvas {
  * guesses that appears at the bottom of the window.
  */
 	public void noteIncorrectGuess(char letter, int wrongGuess) {
-//		if (head == null){
-//			createBodyParts();
-//		}
-//		
-//		switch (wrongGuess) {
-//		case 1: head.setVisible(true);
-//				break;
-//		}
+		if (head == null){
+			createBodyParts();
+		}
+		
+		switch (wrongGuess) {
+		case 1: head.setVisible(true);
+				break;
+		}
 		
 	}
 	
