@@ -28,8 +28,16 @@ public class HangmanCanvas extends GCanvas {
  * on the scaffold and adds the letter to the list of incorrect
  * guesses that appears at the bottom of the window.
  */
-	public void noteIncorrectGuess(char letter) {
-		/* You fill this in */
+	public void noteIncorrectGuess(char letter, int wrongGuess) {
+		if (head == null){
+			createBodyParts();
+		}
+		
+//		switch (wrongGuess) {
+//		case 1: head.setVisible(true);
+//				break;
+//		}
+		
 	}
 	
 
@@ -47,7 +55,14 @@ public class HangmanCanvas extends GCanvas {
 	private static final int FOOT_LENGTH = 28;
 	
 	private GOval head;
-	private GLine leftArm, rightArm, body, leftLeg, rightLeg;
+	private GCompound leftArm, rightArm, leftLeg, rightLeg;
+	private GLine body;
+	
+	private void createBodyParts(){
+		body = new GLine(getWidth()/2, getHeight()/2 + BODY_LENGTH/2 , getWidth()/2, getHeight()/2 - BODY_LENGTH/2);
+		this.add(body);
+//		head.setVisible(false);
+	}
 	
 
 }

@@ -24,7 +24,6 @@ public class Hangman extends ConsoleProgram {
 	public void init(){
 		hangmanCanvas = new HangmanCanvas();
 		add(hangmanCanvas);
-		hangmanCanvas.add(new GRect(100,100,100,100));
 	}
 	
 	//executes playing hangman 
@@ -37,6 +36,10 @@ public class Hangman extends ConsoleProgram {
     			checkGuess();
     			println("userWord = " + userWord);
     			println("word = " + word);
+    			if (wrongGuess == MAXWRONGGUESSES){
+    	    		hangmanCanvas.reset();
+    	    		break;
+    			}
     		}
     		println("word matched!!");
     	}
@@ -84,8 +87,7 @@ public class Hangman extends ConsoleProgram {
     		wrongGuess += 1;
     		hangmanCanvas.noteIncorrectGuess(guessChar.charAt(0));
     	}
-    	if (wrongGuess == MAXWRONGGUESSES){
-//    		revealHangMan();
+    	
     	}
     	guessChar = "";
     }
