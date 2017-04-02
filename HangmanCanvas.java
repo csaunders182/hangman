@@ -40,6 +40,7 @@ public class HangmanCanvas extends GCanvas {
 		case 2: body.setVisible(true);
 				break;
 		case 3: leftArm.setVisible(true);
+				leftHand.setVisible(true);
 				break;
 		default:
 				break;
@@ -62,7 +63,7 @@ public class HangmanCanvas extends GCanvas {
 	private static final int FOOT_LENGTH = 28;
 	
 	private GOval head;
-	private GLine leftArm, eftHand, rightArm, rightHand, leftLeg, rightLeg, body;
+	private GLine leftArm, leftHand, rightArm, rightHand, leftLeg, rightLeg, body;
 	
 	private void createBodyParts(){
 		head = new GOval(getWidth()/2 - HEAD_RADIUS, getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 ,HEAD_RADIUS*2, HEAD_RADIUS *2);
@@ -74,6 +75,9 @@ public class HangmanCanvas extends GCanvas {
 		leftArm = new GLine (getWidth()/2, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD, getWidth()/2 - UPPER_ARM_LENGTH, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD);
 		add(leftArm);
 		leftArm.setVisible(false);
+		leftHand = newGLine (getWidth()/2 - UPPER_ARM_LENGTH, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD, getWidth()/2 - UPPER_ARM_LENGTH, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD + LOWER_ARM_LENGTH);
+		add(leftHand);
+		leftHand.setVisible(false);
 	}
 	
 
