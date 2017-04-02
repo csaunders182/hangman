@@ -34,8 +34,10 @@ public class HangmanCanvas extends GCanvas {
 		}
 		
 		switch (wrongGuess) {
-		case 1: body.setVisible(true);
+		case 1: head.setVisible(true);
 				break;
+		case 1: body.setVisible(true);
+		break;
 		default:
 				break;
 		}
@@ -63,11 +65,10 @@ public class HangmanCanvas extends GCanvas {
 	private void createBodyParts(){
 		head = new GOval(getWidth()/2 - HEAD_RADIUS, getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 ,HEAD_RADIUS*2, HEAD_RADIUS *2);
 		add(head);
-		
+		head.setVisible(false);
 		body = new GLine(getWidth()/2, getHeight()/2 + BODY_LENGTH/2 , getWidth()/2, getHeight()/2 - BODY_LENGTH/2);
 		body.setVisible(false);
 		add(body);
-
 	}
 	
 
