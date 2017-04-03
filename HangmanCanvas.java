@@ -183,7 +183,7 @@ public class HangmanCanvas extends GCanvas {
 			wordLabel.setLabel(word);
 			wordLabel.setLocation(getWidth()/2 - wordLabel.getWidth()/2, LABEL_Y_OFFSET);
 		} else {
-			guessLabel.setLabel("guessString + guessChar +");
+			guessLabel.setLabel(guessChar);
 			guessLabel.setLocation(getWidth()/2 - guessLabel.getWidth()/2, getHeight() - LABEL_Y_OFFSET/2);
 		}
 	}
