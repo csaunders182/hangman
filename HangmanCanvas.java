@@ -33,9 +33,9 @@ public class HangmanCanvas extends GCanvas {
  * state of the game.  The argument string shows what letters have
  * been guessed so far; unguessed letters are indicated by hyphens.
  */
-	public void displayWord(String word) {
-		createWordLabel(word.length());
-		updateLabel(word);
+	public void displayWord(String word, String guessChar, Boolean wrongGuess) {
+		createWordLabels();
+		updateWordLabel(word, wrongGuess);
 	}
 
 /**
@@ -82,7 +82,7 @@ public class HangmanCanvas extends GCanvas {
 	
 
 /* Constants for the simple version of the picture (in pixels) */
-	private static final int SCAFFOLD_HEIGHT = 360;
+//	private static final int SCAFFOLD_HEIGHT = 360;
 	private static final int BEAM_LENGTH = 144;
 	private static final int ROPE_LENGTH = 18;
 	private static final int HEAD_RADIUS = 36;
@@ -98,7 +98,7 @@ public class HangmanCanvas extends GCanvas {
 	
 	private GOval head;
 	private GLine leftArm, leftHand, rightArm, rightHand, leftHip, leftLeg, leftFoot, rightHip, rightLeg, rightFoot, body , ground, scaffoldPole, scaffoldBeam , scaffoldRope;
-	private GLabel wordLabel;
+	private GLabel wordLabel, guessLabel;
 	
 	private void createBodyParts(){
 		
@@ -164,17 +164,26 @@ public class HangmanCanvas extends GCanvas {
 		
 	}
 	
-	private void createWordLabel(int stringLength){
+	private void createWordLabels(){
 		if(wordLabel == null){
 			wordLabel = new GLabel("", getWidth()/2, LABEL_Y_OFFSET);
 			wordLabel.setFont("TimesNewRoman-30");
 			add(wordLabel);
 		}
+		if(guessLabel == null){
+			guessLabel = new GLabel("", getWidth()/2, getHeight() - LABEL_Y_OFFSET);
+			guessLabel.setFont("TimesNewRoman-30");
+			add(guessLabel);
+		}
 	}
 	
-	private void updateLabel(String word){
-		wordLabel.setLabel(word);
-		wordLabel.setLocation(getWidth()/2 - wordLabel.getWidth()/2, LABEL_Y_OFFSET);
+	private void updateWordLabel(String word, String guessChar, Boolean wrongGuess){
+		if (wrongGuess == false){
+			wordLabel.setLabel(word);
+			wordLabel.setLocation(getWidth()/2 - wordLabel.getWidth()/2, LABEL_Y_OFFSET);
+		} else {
+			guessLabel.setLabel(guessLabel + guessChar + " ");
+		}
 	}
 
 }
