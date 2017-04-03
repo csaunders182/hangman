@@ -36,6 +36,7 @@ public class Hangman extends ConsoleProgram {
     		while (!userWord.equals(word)){
     			userGuessCharacter();
     			checkGuess();
+    			hangmanCanvas.displayWord(userWord);
     			println("userWord = " + userWord);
     			println("word = " + word);
     			if (wrongGuess > MAXWRONGGUESSES){

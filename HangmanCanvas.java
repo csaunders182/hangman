@@ -34,7 +34,8 @@ public class HangmanCanvas extends GCanvas {
  * been guessed so far; unguessed letters are indicated by hyphens.
  */
 	public void displayWord(String word) {
-		/* You fill this in */
+		createWordLabel(word.length());
+		updateLabel(String word);
 	}
 
 /**
@@ -164,8 +165,13 @@ public class HangmanCanvas extends GCanvas {
 	
 	private void createWordLabel(int stringLength){
 		if(wordLabel == null){
-			
+			wordLabel = new GLabel("", getWidth()/2, -10);
+			add(wordLabel);
 		}
+	}
+	
+	private void updateLabel(String word){
+		wordLabel.setLabel(word);
 	}
 
 }
