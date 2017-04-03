@@ -50,6 +50,7 @@ public class Hangman extends ConsoleProgram {
     		guessedWrong = false;
 			hangmanCanvas.displayWord(userWord, guessChar, guessedWrong);
     		println("word matched!!");
+    		readLine("press enter to continue");
     		userWord = "";
     	}
 	}
