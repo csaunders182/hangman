@@ -50,6 +50,7 @@ public class HangmanCanvas extends GCanvas {
 				break;
 		case 2: scaffoldPole.setVisible(true);
 				scaffoldBeam.setVisible(true);
+				scaffoldRope.setVisible(true);
 				break;
 		case 3: head.setVisible(true);
 				break;
@@ -105,6 +106,9 @@ public class HangmanCanvas extends GCanvas {
 		scaffoldBeam = new GLine(getWidth()/2 - BEAM_LENGTH , getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 - ROPE_LENGTH , getWidth()/2, getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 - ROPE_LENGTH);
 		add(scaffoldBeam);
 		scaffoldBeam.setVisible(false);
+		scaffoldRope = new GLine(getWidth()/2, getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 - ROPE_LENGTH , getWidth()/2, getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2);
+		add(scaffoldRope);
+		scaffoldRope.setVisible(false);
 		
 		
 		head = new GOval(getWidth()/2 - HEAD_RADIUS, getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 ,HEAD_RADIUS*2, HEAD_RADIUS *2);
