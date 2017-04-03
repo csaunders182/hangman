@@ -44,6 +44,7 @@ public class Hangman extends ConsoleProgram {
     			if (wrongGuess > MAXWRONGGUESSES){
     	    		hangmanCanvas.reset();
     	    		wrongGuess = 0;
+    	    		guessCharString = "";
     	    		break;
     			}
     			hangmanCanvas.displayWord(userWord, guessCharString, guessedWrong);
