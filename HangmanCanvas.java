@@ -94,7 +94,7 @@ public class HangmanCanvas extends GCanvas {
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
 	private static final int GROUND_OFFSET = 10;
-	private static final int LABEL_Y_OFFSET = 30;
+	private static final int LABEL_Y_OFFSET = 50;
 	
 	private GOval head;
 	private GLine leftArm, leftHand, rightArm, rightHand, leftHip, leftLeg, leftFoot, rightHip, rightLeg, rightFoot, body , ground, scaffoldPole, scaffoldBeam , scaffoldRope;
