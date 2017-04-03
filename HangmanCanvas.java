@@ -101,6 +101,10 @@ public class HangmanCanvas extends GCanvas {
 		scaffoldPole = new GLine(getWidth()/2 - BEAM_LENGTH , getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 - ROPE_LENGTH , getWidth()/2 - BEAM_LENGTH, getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH + GROUND_OFFSET);
 		add(scaffoldPole);
 		scaffoldPole.setVisible(false);
+		scaffoldBeam = new GLine(getWidth()/2 - BEAM_LENGTH , getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 - ROPE_LENGTH , getWidth()/2, getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH + GROUND_OFFSET);
+		add(scaffoldBeam);
+		scaffoldBeam.setVisible(false);
+		
 		
 		head = new GOval(getWidth()/2 - HEAD_RADIUS, getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 ,HEAD_RADIUS*2, HEAD_RADIUS *2);
 		add(head);
