@@ -49,6 +49,7 @@ public class HangmanCanvas extends GCanvas {
 		case 1: ground.setVisible(true);
 				break;
 		case 2: scaffoldPole.setVisible(true);
+				scaffoldBeam.setVisible(true);
 				break;
 		case 3: head.setVisible(true);
 				break;
