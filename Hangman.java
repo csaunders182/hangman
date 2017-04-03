@@ -20,6 +20,7 @@ public class Hangman extends ConsoleProgram {
 	private int wrongGuess = 0;
 	private HangmanCanvas hangmanCanvas;
 	private RandomGenerator rGen;
+	private boolean guessedWrong = false;
 	
 	//sets up the hangman game
 	public void init(){
@@ -33,11 +34,10 @@ public class Hangman extends ConsoleProgram {
     	while (true){
     		getWordFromLexicon();
     		createUserWord();
+			hangmanCanvas.displayWord(userWord, guessChar, guessedWrong);
     		while (!userWord.equals(word)){
-    			hangmanCanvas.displayWord(userWord);
     			userGuessCharacter();
     			checkGuess();
-    			hangmanCanvas.displayWord(userWord);
     			println("userWord = " + userWord);
     			println("word = " + word);
     			if (wrongGuess > MAXWRONGGUESSES){
@@ -45,7 +45,10 @@ public class Hangman extends ConsoleProgram {
     	    		wrongGuess = 0;
     	    		break;
     			}
+    			hangmanCanvas.displayWord(userWord, guessChar, guessedWrong);
     		}
+    		guessedWrong = false;
+			hangmanCanvas.displayWord(userWord, guessChar, guessedWrong);
     		println("word matched!!");
     		userWord = "";
     	}
