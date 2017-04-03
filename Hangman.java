@@ -45,6 +45,7 @@ public class Hangman extends ConsoleProgram {
     			}
     		}
     		println("word matched!!");
+    		userWord = "";
     	}
 	}
     
