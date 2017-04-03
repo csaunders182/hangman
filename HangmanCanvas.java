@@ -166,6 +166,7 @@ public class HangmanCanvas extends GCanvas {
 	private void createWordLabel(int stringLength){
 		if(wordLabel == null){
 			wordLabel = new GLabel("", getWidth()/2, 20);
+			wordLabel.setFont("Times New Roman - 30");
 			add(wordLabel);
 		}
 	}
