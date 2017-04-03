@@ -165,7 +165,7 @@ public class HangmanCanvas extends GCanvas {
 	
 	private void createWordLabel(int stringLength){
 		if(wordLabel == null){
-			wordLabel = new GLabel("", getWidth()/2, 10);
+			wordLabel = new GLabel("", getWidth()/2, 20);
 			add(wordLabel);
 		}
 	}
