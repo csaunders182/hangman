@@ -12,6 +12,10 @@ public class HangmanCanvas extends GCanvas {
 	public void reset() {
 		head.setVisible(false);
 		body.setVisible(false);
+		leftArm.setVisible(false);
+		leftHand.setVisible(false);
+		rightArm.setVisible(false);
+		rightHand.setVisible(false);
 	}
 
 /**

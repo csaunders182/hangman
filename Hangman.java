@@ -38,6 +38,7 @@ public class Hangman extends ConsoleProgram {
     			println("word = " + word);
     			if (wrongGuess == MAXWRONGGUESSES){
     	    		hangmanCanvas.reset();
+    	    		wrongGuess = 0;
     	    		break;
     			}
     		}
