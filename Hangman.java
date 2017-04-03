@@ -56,7 +56,7 @@ public class Hangman extends ConsoleProgram {
     
     private void createUserWord(){
     	for (int i=0; i<word.length();i++){
-    		userWord = (userWord + " ");
+    		userWord = (userWord + "_");
     	}
     }
     
