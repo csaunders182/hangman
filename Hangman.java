@@ -52,7 +52,11 @@ public class Hangman extends ConsoleProgram {
     		}
     		guessedWrong = false;
 			hangmanCanvas.displayWord(userWord, guessCharString, guessedWrong);
+			if (userWord.equals(word)){
     		println("word matched!!");
+			} else {
+				println("better luck next time");
+			}
     		readLine("press enter to continue");
     		userWord = "";
     	}
