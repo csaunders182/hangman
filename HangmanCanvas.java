@@ -99,6 +99,7 @@ public class HangmanCanvas extends GCanvas {
 	private GOval head;
 	private GLine leftArm, leftHand, rightArm, rightHand, leftHip, leftLeg, leftFoot, rightHip, rightLeg, rightFoot, body , ground, scaffoldPole, scaffoldBeam , scaffoldRope;
 	private GLabel wordLabel, guessLabel;
+	private String guessString = "";
 	
 	private void createBodyParts(){
 		
@@ -182,7 +183,7 @@ public class HangmanCanvas extends GCanvas {
 			wordLabel.setLabel(word);
 			wordLabel.setLocation(getWidth()/2 - wordLabel.getWidth()/2, LABEL_Y_OFFSET);
 		} else {
-			guessLabel.setLabel(guessLabel.getLabel() + guessChar +" ");
+			guessLabel.setLabel(guessString + guessChar +" ");
 			guessLabel.setLocation(getWidth()/2 - guessLabel.getWidth()/2, getHeight() - LABEL_Y_OFFSET/2);
 		}
 	}
