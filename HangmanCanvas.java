@@ -23,6 +23,9 @@ public class HangmanCanvas extends GCanvas {
 		rightHip.setVisible(false);
 		rightLeg.setVisible(false);
 		rightFoot.setVisible(false);
+		scaffoldPole.setVisible(false);
+		scaffoldBeam.setVisible(false);
+		scaffoldRope.setVisible(false);
 	}
 
 /**
@@ -93,6 +96,7 @@ public class HangmanCanvas extends GCanvas {
 	
 	private GOval head;
 	private GLine leftArm, leftHand, rightArm, rightHand, leftHip, leftLeg, leftFoot, rightHip, rightLeg, rightFoot, body , ground, scaffoldPole, scaffoldBeam , scaffoldRope;
+	private GLabel wordLabel;
 	
 	private void createBodyParts(){
 		
@@ -158,5 +162,10 @@ public class HangmanCanvas extends GCanvas {
 		
 	}
 	
+	private void createWordLabel(int stringLength){
+		if(wordLabel == null){
+			
+		}
+	}
 
 }
