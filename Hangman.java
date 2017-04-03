@@ -19,9 +19,11 @@ public class Hangman extends ConsoleProgram {
 	private String guessChar = "";
 	private int wrongGuess = 0;
 	private HangmanCanvas hangmanCanvas;
+	private RandomGenerator rGen;
 	
 	//sets up the hangman game
 	public void init(){
+		rGen = RandomGenerator.getInstance();
 		hangmanCanvas = new HangmanCanvas();
 		add(hangmanCanvas);
 	}
@@ -47,7 +49,7 @@ public class Hangman extends ConsoleProgram {
 	}
     
     private void getWordFromLexicon(){
-    	word = hangmanLexicon.getWord(0);
+    	word = hangmanLexicon.getWord(rGen.nextInt(0, hangmanLexicon.getWordCount()));
     }
     
     private void createUserWord(){
