@@ -52,7 +52,10 @@ public class HangmanCanvas extends GCanvas {
 		case 5: leftHip.setVisible(true);
 				leftLeg.setVisible(true);
 				leftFoot.setVisible(true);
-		break;
+		case 6: rightHip.setVisible(true);
+				rightLeg.setVisible(true);
+				rightFoot.setVisible(true);
+				break;
 		default:
 				break;
 		}
@@ -74,21 +77,25 @@ public class HangmanCanvas extends GCanvas {
 	private static final int FOOT_LENGTH = 28;
 	
 	private GOval head;
-	private GLine leftArm, leftHand, rightArm, rightHand, leftHip, leftLeg, leftFoot, rightLeg, body;
+	private GLine leftArm, leftHand, rightArm, rightHand, leftHip, leftLeg, leftFoot, rightHip, rightLeg, rightFoot, body;
 	
 	private void createBodyParts(){
+		
 		head = new GOval(getWidth()/2 - HEAD_RADIUS, getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 ,HEAD_RADIUS*2, HEAD_RADIUS *2);
 		add(head);
 		head.setVisible(false);
+		
 		body = new GLine(getWidth()/2, getHeight()/2 + BODY_LENGTH/2 , getWidth()/2, getHeight()/2 - BODY_LENGTH/2);
 		body.setVisible(false);
 		add(body);
+		
 		leftArm = new GLine (getWidth()/2, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD, getWidth()/2 - UPPER_ARM_LENGTH, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD);
 		add(leftArm);
 		leftArm.setVisible(false);
 		leftHand = new GLine (getWidth()/2 - UPPER_ARM_LENGTH, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD, getWidth()/2 - UPPER_ARM_LENGTH, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD + LOWER_ARM_LENGTH);
 		add(leftHand);
 		leftHand.setVisible(false);
+		
 		rightArm = new GLine (getWidth()/2, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD, getWidth()/2 + UPPER_ARM_LENGTH, getHeight()/2 - BODY_LENGTH/2 + ARM_OFFSET_FROM_HEAD);
 		add(rightArm);
 		rightArm.setVisible(false);
@@ -105,6 +112,16 @@ public class HangmanCanvas extends GCanvas {
 		leftFoot = new GLine (getWidth()/2 - HIP_WIDTH/2, getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH, getWidth()/2 - HIP_WIDTH/2 - FOOT_LENGTH , getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH);
 		add(leftFoot);
 		leftFoot.setVisible(false);
+		
+		rightHip = new GLine (getWidth()/2, getHeight()/2 + BODY_LENGTH/2, getWidth()/2 + HIP_WIDTH/2, getHeight()/2 + BODY_LENGTH/2);
+		add(rightHip);
+		rightHip.setVisible(false);
+		rightLeg = new GLine (getWidth()/2 + HIP_WIDTH/2, getHeight()/2 + BODY_LENGTH/2, getWidth()/2 + HIP_WIDTH/2, getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH);
+		add(rightLeg);
+		rightLeg.setVisible(false);
+		rightFoot = new GLine (getWidth()/2 -+ HIP_WIDTH/2, getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH, getWidth()/2 + HIP_WIDTH/2 - FOOT_LENGTH , getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH);
+		add(rightFoot);
+		rightFoot.setVisible(false);
 		
 	}
 	
