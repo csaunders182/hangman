@@ -35,7 +35,7 @@ public class HangmanCanvas extends GCanvas {
  */
 	public void displayWord(String word) {
 		createWordLabel(word.length());
-		updateLabel(String word);
+		updateLabel(word);
 	}
 
 /**
