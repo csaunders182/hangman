@@ -26,6 +26,7 @@ public class HangmanCanvas extends GCanvas {
 		scaffoldPole.setVisible(false);
 		scaffoldBeam.setVisible(false);
 		scaffoldRope.setVisible(false);
+		guessLabel.setLabel("");
 	}
 
 /**
