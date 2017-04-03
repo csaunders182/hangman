@@ -34,6 +34,7 @@ public class Hangman extends ConsoleProgram {
     		getWordFromLexicon();
     		createUserWord();
     		while (!userWord.equals(word)){
+    			hangmanCanvas.displayWord(userWord);
     			userGuessCharacter();
     			checkGuess();
     			hangmanCanvas.displayWord(userWord);
@@ -56,7 +57,7 @@ public class Hangman extends ConsoleProgram {
     
     private void createUserWord(){
     	for (int i=0; i<word.length();i++){
-    		userWord = (userWord + "_");
+    		userWord = (userWord + "-");
     	}
     }
     
