@@ -10,12 +10,19 @@ public class HangmanCanvas extends GCanvas {
 
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
+		ground.setVisible(false);
 		head.setVisible(false);
 		body.setVisible(false);
 		leftArm.setVisible(false);
 		leftHand.setVisible(false);
 		rightArm.setVisible(false);
 		rightHand.setVisible(false);
+		leftHip.setVisible(false);
+		leftLeg.setVisible(false);
+		leftFoot.setVisible(false);
+		rightHip.setVisible(false);
+		rightLeg.setVisible(false);
+		rightFoot.setVisible(false);
 	}
 
 /**
@@ -87,7 +94,7 @@ public class HangmanCanvas extends GCanvas {
 	
 	private void createBodyParts(){
 		
-		ground = new GLine(0, getHeight()/2 - BODY_LENGTH/2 - LEG_LENGTH - GROUND_OFFSET, getWidth(), getHeight()/2 - BODY_LENGTH/2 - LEG_LENGTH - GROUND_OFFSET);
+		ground = new GLine(0, getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH + GROUND_OFFSET, getWidth(), getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH + GROUND_OFFSET);
 		add(ground);
 		ground.setVisible(false);
 		
