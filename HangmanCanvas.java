@@ -33,9 +33,9 @@ public class HangmanCanvas extends GCanvas {
  * state of the game.  The argument string shows what letters have
  * been guessed so far; unguessed letters are indicated by hyphens.
  */
-	public void displayWord(String word, String guessChar, Boolean wrongGuess) {
+	public void displayWord(String word, String guessCharString, Boolean wrongGuess) {
 		createWordLabels();
-		updateWordLabel(word, guessChar, wrongGuess);
+		updateWordLabel(word, guessCharString, wrongGuess);
 	}
 
 /**
@@ -178,12 +178,12 @@ public class HangmanCanvas extends GCanvas {
 		}
 	}
 	
-	private void updateWordLabel(String word, String guessChar, Boolean wrongGuess){
+	private void updateWordLabel(String word, String guessCharString, Boolean wrongGuess){
 		if (wrongGuess == false){
 			wordLabel.setLabel(word);
 			wordLabel.setLocation(getWidth()/2 - wordLabel.getWidth()/2, LABEL_Y_OFFSET);
 		} else {
-			guessLabel.setLabel(guessChar);
+			guessLabel.setLabel(guessCharString);
 			guessLabel.setLocation(getWidth()/2 - guessLabel.getWidth()/2, getHeight() - LABEL_Y_OFFSET/2);
 		}
 	}
