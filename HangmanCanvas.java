@@ -39,21 +39,25 @@ public class HangmanCanvas extends GCanvas {
 		}
 		
 		switch (wrongGuess) {
-		case 1: head.setVisible(true);
+		case 1: ground.setVisible(true);
 				break;
-		case 2: body.setVisible(true);
+		case 2: 
 				break;
-		case 3: leftArm.setVisible(true);
+		case 3: head.setVisible(true);
+				break;
+		case 4: body.setVisible(true);
+				break;
+		case 5: leftArm.setVisible(true);
 				leftHand.setVisible(true);
 				break;
-		case 4: rightArm.setVisible(true);
+		case 6: rightArm.setVisible(true);
 				rightHand.setVisible(true);
 				break;
-		case 5: leftHip.setVisible(true);
+		case 7: leftHip.setVisible(true);
 				leftLeg.setVisible(true);
 				leftFoot.setVisible(true);
 				break;
-		case 6: rightHip.setVisible(true);
+		case 8: rightHip.setVisible(true);
 				rightLeg.setVisible(true);
 				rightFoot.setVisible(true);
 				break;
@@ -76,11 +80,16 @@ public class HangmanCanvas extends GCanvas {
 	private static final int HIP_WIDTH = 36;
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
+	private static final int GROUND_OFFSET = 10;
 	
 	private GOval head;
-	private GLine leftArm, leftHand, rightArm, rightHand, leftHip, leftLeg, leftFoot, rightHip, rightLeg, rightFoot, body;
+	private GLine leftArm, leftHand, rightArm, rightHand, leftHip, leftLeg, leftFoot, rightHip, rightLeg, rightFoot, body , ground, scaffoldPole, scaffoldBeam , scaffoldRope;
 	
 	private void createBodyParts(){
+		
+		ground = new GLine(0, getHeight()/2 - BODY_LENGTH/2 - LEG_LENGTH - GROUND_OFFSET, getWidth(), getHeight()/2 - BODY_LENGTH/2 - LEG_LENGTH - GROUND_OFFSET);
+		add(ground);
+		ground.setVisible(false);
 		
 		head = new GOval(getWidth()/2 - HEAD_RADIUS, getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 ,HEAD_RADIUS*2, HEAD_RADIUS *2);
 		add(head);
@@ -123,6 +132,7 @@ public class HangmanCanvas extends GCanvas {
 		rightFoot = new GLine (getWidth()/2 + HIP_WIDTH/2, getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH, getWidth()/2 + HIP_WIDTH/2 + FOOT_LENGTH , getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH);
 		add(rightFoot);
 		rightFoot.setVisible(false);
+		
 		
 		
 		
