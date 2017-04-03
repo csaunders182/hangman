@@ -46,6 +46,7 @@ public class Hangman extends ConsoleProgram {
     	    		break;
     			}
     			hangmanCanvas.displayWord(userWord, guessChar, guessedWrong);
+    			guessedWrong = false;
     		}
     		guessedWrong = false;
 			hangmanCanvas.displayWord(userWord, guessChar, guessedWrong);
@@ -92,6 +93,7 @@ public class Hangman extends ConsoleProgram {
     		} 
     		if (word.charAt(i) != guessChar.charAt(0)){
 				wrongCount += 1;
+				guessedWrong = true;
 			}
     	}
     	if (wrongCount == word.length()){
