@@ -48,7 +48,7 @@ public class HangmanCanvas extends GCanvas {
 		switch (wrongGuess) {
 		case 1: ground.setVisible(true);
 				break;
-		case 2: 
+		case 2: scaffoldPole.setVisible(true);
 				break;
 		case 3: head.setVisible(true);
 				break;
@@ -97,6 +97,10 @@ public class HangmanCanvas extends GCanvas {
 		ground = new GLine(0, getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH + GROUND_OFFSET, getWidth(), getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH + GROUND_OFFSET);
 		add(ground);
 		ground.setVisible(false);
+		
+		scaffoldPole = new GLine(getWidth()/2 - BEAM_LENGTH , getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 - ROPE_LENGTH , getWidth()/2 - BEAM_LENGTH, getHeight()/2 + BODY_LENGTH/2 + LEG_LENGTH + GROUND_OFFSET);
+		add(scaffoldPole);
+		scaffoldPole.setVisible(false);
 		
 		head = new GOval(getWidth()/2 - HEAD_RADIUS, getHeight()/2 - BODY_LENGTH/2 - HEAD_RADIUS*2 ,HEAD_RADIUS*2, HEAD_RADIUS *2);
 		add(head);
