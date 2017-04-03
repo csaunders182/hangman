@@ -49,7 +49,7 @@ public class Hangman extends ConsoleProgram {
 	}
     
     private void getWordFromLexicon(){
-    	word = hangmanLexicon.getWord(rGen.nextInt(0, hangmanLexicon.getWordCount()));
+    	word = hangmanLexicon.getWord(rGen.nextInt(0, hangmanLexicon.getWordCount() - 1));
     }
     
     private void createUserWord(){
