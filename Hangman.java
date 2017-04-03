@@ -94,8 +94,5 @@ public class Hangman extends ConsoleProgram {
     		hangmanCanvas.noteIncorrectGuess(guessChar.charAt(0), wrongGuess);
     	}
     	guessChar = "";
-    }
-    
-    
-
+    } 
 }
