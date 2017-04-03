@@ -174,7 +174,7 @@ public class HangmanCanvas extends GCanvas {
 	
 	private void updateLabel(String word){
 		wordLabel.setLabel(word);
-		wordLabel.setLocation(getWidth()/2 - wordLabel.getWidth()/2, 20);
+		wordLabel.setLocation(getWidth()/2 - wordLabel.getWidth()/2, LABEL_Y_OFFSET);
 	}
 
 }
