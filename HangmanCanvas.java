@@ -171,7 +171,7 @@ public class HangmanCanvas extends GCanvas {
 			add(wordLabel);
 		}
 		if(guessLabel == null){
-			guessLabel = new GLabel("", getWidth()/2, getHeight()/2);
+			guessLabel = new GLabel("", getWidth()/2, getHeight() - LABEL_Y_OFFSET);
 			guessLabel.setFont("TimesNewRoman-30");
 			add(guessLabel);
 		}
