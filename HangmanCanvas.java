@@ -171,7 +171,7 @@ public class HangmanCanvas extends GCanvas {
 			add(wordLabel);
 		}
 		if(guessLabel == null){
-			guessLabel = new GLabel("", getWidth()/2, getHeight() - LABEL_Y_OFFSET);
+			guessLabel = new GLabel("", getWidth()/2, getHeight() - LABEL_Y_OFFSET/2);
 			guessLabel.setFont("TimesNewRoman-30");
 			add(guessLabel);
 		}
@@ -183,6 +183,7 @@ public class HangmanCanvas extends GCanvas {
 			wordLabel.setLocation(getWidth()/2 - wordLabel.getWidth()/2, LABEL_Y_OFFSET);
 		} else {
 			guessLabel.setLabel(guessLabel + guessChar + " ");
+			wordLabel.setLocation(getWidth()/2 - guessLabel.getWidth()/2, getHeight() - LABEL_Y_OFFSET/2);
 		}
 	}
 
