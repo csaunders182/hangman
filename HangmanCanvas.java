@@ -124,6 +124,8 @@ public class HangmanCanvas extends GCanvas {
 		add(rightFoot);
 		rightFoot.setVisible(false);
 		
+		
+		
 	}
 	
 
