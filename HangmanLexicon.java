@@ -31,25 +31,25 @@ public class HangmanLexicon {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		try {
-			rd.mark(0);
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-		try {
-			while (true){
-				String line = rd.readLine();
-				if (line != null){
-					count += 1;
-				} else {
-					count += 1;
-					break;
-				}
-			}
+//		try {
+//			rd.mark(0);
+//		} catch (IOException e1) {
+//			e1.printStackTrace();
+//		}
+//		try {
+//			while (true){
+//				String line = rd.readLine();
+//				if (line != null){
+//					count += 1;
+//				} else {
+//					count += 1;
+//					break;
+//				}
+//			}
 //			rd.close();
-		} catch (IOException ex) {
-			throw new ErrorException(ex);
-		}
+//		} catch (IOException ex) {
+//			throw new ErrorException(ex);
+//		}
 		lexicon = new String [count];
 		try {
 			rd.reset();
@@ -77,5 +77,5 @@ public class HangmanLexicon {
 //	}
 	
 	private String[] lexicon;
-	private int count = 0;
+	private int count = 121808;
 }
