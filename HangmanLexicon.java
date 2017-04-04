@@ -73,5 +73,5 @@ public class HangmanLexicon {
 	}
 	
 	private String[] lexicon;
-	private int count = 121808;
+	private int count = 0;
 }
