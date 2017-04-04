@@ -64,6 +64,7 @@ public class Hangman extends ConsoleProgram {
 	}
     
     private void getWordFromLexicon(){
+    	println(hangmanLexicon.getWordCount());
     	word = hangmanLexicon.getWord(rGen.nextInt(0, hangmanLexicon.getWordCount() - 1));
     }
     
