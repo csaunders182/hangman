@@ -40,8 +40,6 @@ public class Hangman extends ConsoleProgram {
     		while (!userWord.equals(word)){
     			userGuessCharacter();
     			checkGuess();
-    			println("userWord = " + userWord);
-    			println("word = " + word);
     			if (wrongGuess > MAXWRONGGUESSES){
     	    		hangmanCanvas.reset();
     	    		wrongGuess = 0;
@@ -64,7 +62,6 @@ public class Hangman extends ConsoleProgram {
 	}
     
     private void getWordFromLexicon(){
-    	println(hangmanLexicon.getWordCount());
     	word = hangmanLexicon.getWord(rGen.nextInt(0, hangmanLexicon.getWordCount() - 1));
     }
     
