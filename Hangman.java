@@ -28,7 +28,7 @@ public class Hangman extends ConsoleProgram {
 		rGen = RandomGenerator.getInstance();
 		hangmanCanvas = new HangmanCanvas();
 		add(hangmanCanvas);
-		hangmanLexicon = new HangmanLexicon()
+		hangmanLexicon = new HangmanLexicon();
 	}
 	
 	//executes playing hangman 
