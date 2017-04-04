@@ -53,7 +53,7 @@ public class Hangman extends ConsoleProgram {
     		guessedWrong = false;
 			hangmanCanvas.displayWord(userWord, guessCharString, guessedWrong);
 			if (userWord.equals(word)){
-    		println("word matched!!");
+    		println("word matched!!  ");
 			} else {
 				println("better luck next time");
 			}

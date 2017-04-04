@@ -5,29 +5,57 @@
  * class that you will reimplement for Part III of the assignment.
  */
 
+import java.io.*;
 import acm.util.*;
+
 
 public class HangmanLexicon {
 
 /** Returns the number of words in the lexicon. */
 	public int getWordCount() {
-		return 10;
+		return lexicon.length;
 	}
 
 /** Returns the word at the specified index. */
 	public String getWord(int index) {
-		switch (index) {
-			case 0: return "BUOY";
-			case 1: return "COMPUTER";
-			case 2: return "CONNOISSEUR";
-			case 3: return "DEHYDRATE";
-			case 4: return "FUZZY";
-			case 5: return "HUBBUB";
-			case 6: return "KEYHOLE";
-			case 7: return "QUAGMIRE";
-			case 8: return "SLITHER";
-			case 9: return "ZIRCON";
-			default: throw new ErrorException("getWord: Illegal index");
+		return lexicon[index];
+	}
+	
+
+	//initializer for hangmanLexicon 
+	public HangmanLexicon(){
+		int count = 0;
+		BufferedReader rd = null;
+		try {
+			rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-	};
+		try {
+			while (true){
+				String line = rd.readLine();
+				if (line != null){
+					count += 1;
+				} else {
+					count += 1;
+					break;
+				}
+			}
+			rd.close();
+		} catch (IOException ex) {
+			throw new ErrorException(ex);
+		}
+		lexicon = new String [count];
+		try {
+			for (int i=0; i<count; i++){
+				lexicon[i] = rd.readLine();
+			}
+			rd.close();
+		} catch (IOException ex) {
+			throw new ErrorException(ex);
+		}
+	}
+	
+	private String[] lexicon;
 }
