@@ -25,37 +25,14 @@ public class HangmanLexicon {
 	//initializer for hangmanLexicon 
 	public HangmanLexicon(){
 		BufferedReader rd = newReader();
-//		try {
-//			rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
-//		} catch (FileNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		try {
-//			rd.mark(0);
-//		} catch (IOException e1) {
-//			e1.printStackTrace();
-//		}
-//		try {
-//			while (true){
-//				String line = rd.readLine();
-//				if (line != null){
-//					count += 1;
-//				} else {
-//					count += 1;
-//					break;
-//				}
-//			}
-//			rd.close();
-//		} catch (IOException ex) {
-//			throw new ErrorException(ex);
-//		}
+		getCount(rd);
+		try {
+			rd.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		lexicon = new String [count];
-//		try {
-//			rd.reset();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		rd = newReader();
 		try {
 			for (int i=0; i<count; i++){
 				lexicon[i] = rd.readLine();
@@ -75,6 +52,24 @@ public class HangmanLexicon {
 			e.printStackTrace();
 		}
 		return rd;
+	}
+	
+	private int getCount(BufferedReader rd){
+		int count = 0;
+		try {
+			while (true){
+				String line = rd.readLine();
+				if (line != null){
+					count += 1;
+				} else {
+					count += 1;
+					break;
+				}
+			}
+		} catch (IOException ex) {
+		throw new ErrorException(ex);
+		}
+		return count;
 	}
 	
 	private String[] lexicon;
