@@ -24,13 +24,13 @@ public class HangmanLexicon {
 
 	//initializer for hangmanLexicon 
 	public HangmanLexicon(){
-		BufferedReader rd = null;
-		try {
-			rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		BufferedReader rd = newReader();
+//		try {
+//			rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 //		try {
 //			rd.mark(0);
 //		} catch (IOException e1) {
@@ -66,15 +66,16 @@ public class HangmanLexicon {
 		}
 	}
 	
-//	private BufferedReader newreader(){
-//		try {
-//			rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
-//		} catch (FileNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		return rd;
-//	}
+	private BufferedReader newReader(){
+		BufferedReader rd = null;
+		try {
+			rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rd;
+	}
 	
 	private String[] lexicon;
 	private int count = 121808;
