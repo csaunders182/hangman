@@ -42,7 +42,7 @@ public class HangmanLexicon {
 					break;
 				}
 			}
-			rd.close();
+//			rd.close();
 		} catch (IOException ex) {
 			throw new ErrorException(ex);
 		}
