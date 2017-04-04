@@ -29,14 +29,8 @@ public class HangmanLexicon {
 		closeRd(rd);
 		lexicon = new String [count];
 		rd = newReader();
-		try {
-			for (int i=0; i<count; i++){
-				lexicon[i] = rd.readLine();
-			}
-			rd.close();
-		} catch (IOException ex) {
-			throw new ErrorException(ex);
-		}
+		addWordsToLexicon(rd);
+		closeRd(rd);
 	}
 	
 	private BufferedReader newReader(){
@@ -75,6 +69,17 @@ public class HangmanLexicon {
 			e.printStackTrace();
 		}
 	}
+	
+	private void addWordsToLexicon(BufferedReader rd){
+		try {
+			for (int i=0; i<count; i++){
+				lexicon[i] = rd.readLine();
+			}
+		} catch (IOException ex) {
+			throw new ErrorException(ex);
+		}
+	}
+	
 	private String[] lexicon;
 	private int count = 0;
 }
