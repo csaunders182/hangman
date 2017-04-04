@@ -42,7 +42,7 @@ public class HangmanLexicon {
 					break;
 				}
 			}
-//			rd.close();
+			rd.close();
 		} catch (IOException ex) {
 			throw new ErrorException(ex);
 		}
@@ -56,6 +56,16 @@ public class HangmanLexicon {
 			throw new ErrorException(ex);
 		}
 	}
+	
+//	private BufferedReader newreader(){
+//		try {
+//			rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		return rd;
+//	}
 	
 	private String[] lexicon;
 }
