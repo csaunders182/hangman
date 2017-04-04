@@ -25,7 +25,7 @@ public class HangmanLexicon {
 	//initializer for hangmanLexicon 
 	public HangmanLexicon(){
 		BufferedReader rd = newReader();
-		getCount(rd);
+		count = getCount(rd);
 		try {
 			rd.close();
 		} catch (IOException e) {
