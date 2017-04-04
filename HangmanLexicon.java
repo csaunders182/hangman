@@ -46,7 +46,7 @@ public class HangmanLexicon {
 		} catch (IOException ex) {
 			throw new ErrorException(ex);
 		}
-		lexicon = new String [count];
+		lexicon = new String [25];
 		try {
 			for (int i=0; i<count; i++){
 				lexicon[i] = rd.readLine();
