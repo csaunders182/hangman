@@ -33,6 +33,11 @@ public class HangmanLexicon {
 			e.printStackTrace();
 		}
 		try {
+			rd.mark(0);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		try {
 			while (true){
 				String line = rd.readLine();
 				if (line != null){
