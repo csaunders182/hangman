@@ -13,7 +13,7 @@ public class HangmanLexicon {
 
 /** Returns the number of words in the lexicon. */
 	public int getWordCount() {
-		return lexicon.length;
+		return count;
 	}
 
 /** Returns the word at the specified index. */
@@ -24,7 +24,6 @@ public class HangmanLexicon {
 
 	//initializer for hangmanLexicon 
 	public HangmanLexicon(){
-		int count = 0;
 		BufferedReader rd = null;
 		try {
 			rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
@@ -78,4 +77,5 @@ public class HangmanLexicon {
 //	}
 	
 	private String[] lexicon;
+	private int count = 0;
 }
