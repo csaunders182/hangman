@@ -24,7 +24,7 @@ public class HangmanLexicon {
 
 	//initializer for hangmanLexicon 
 	public HangmanLexicon(){
-		int count = 1;
+		int count = 0;
 		BufferedReader rd = null;
 		try {
 			rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
