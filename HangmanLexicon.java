@@ -47,14 +47,19 @@ public class HangmanLexicon {
 			throw new ErrorException(ex);
 		}
 		lexicon = new String [count];
-//		try {
-//			for (int i=0; i<count; i++){
-//				lexicon[i] = rd.readLine();
-//			}
-//			rd.close();
-//		} catch (IOException ex) {
-//			throw new ErrorException(ex);
-//		}
+		try {
+			rd.reset();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			for (int i=0; i<count; i++){
+				lexicon[i] = rd.readLine();
+			}
+			rd.close();
+		} catch (IOException ex) {
+			throw new ErrorException(ex);
+		}
 	}
 	
 //	private BufferedReader newreader(){
