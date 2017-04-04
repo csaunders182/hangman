@@ -51,11 +51,11 @@ public class HangmanLexicon {
 //			throw new ErrorException(ex);
 //		}
 		lexicon = new String [count];
-		try {
-			rd.reset();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			rd.reset();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 		try {
 			for (int i=0; i<count; i++){
 				lexicon[i] = rd.readLine();
