@@ -13,7 +13,7 @@ import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
 	private static final int MAXWRONGGUESSES = 8;
-	private HangmanLexicon hangmanLexicon = new HangmanLexicon();
+	private HangmanLexicon hangmanLexicon;
 	private String word = "";
 	private String userWord = "";
 	private String guessChar = "";
@@ -28,6 +28,7 @@ public class Hangman extends ConsoleProgram {
 		rGen = RandomGenerator.getInstance();
 		hangmanCanvas = new HangmanCanvas();
 		add(hangmanCanvas);
+		hangmanLexicon = new HangmanLexicon()
 	}
 	
 	//executes playing hangman 
