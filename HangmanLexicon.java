@@ -26,11 +26,7 @@ public class HangmanLexicon {
 	public HangmanLexicon(){
 		BufferedReader rd = newReader();
 		count = getCount(rd);
-		try {
-			rd.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		closeRd(rd);
 		lexicon = new String [count];
 		rd = newReader();
 		try {
@@ -72,6 +68,13 @@ public class HangmanLexicon {
 		return count;
 	}
 	
+	private void closeRd(BufferedReader rd){
+		try {
+			rd.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	private String[] lexicon;
 	private int count = 0;
 }
